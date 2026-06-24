@@ -84,7 +84,10 @@ button {
   cursor: pointer;
 
   color: white;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    box-shadow 0.3s ease;
 }
 button:hover {
   box-shadow: 10px 4px 20px rgba(217, 78, 12, 0.4);
@@ -96,7 +99,7 @@ button:hover {
   justify-content: center;
   gap: 18px;
   margin-bottom: 15px;
-  width: 30%;
+  width: auto;
   margin: 20px auto;
 }
 .static-text .arrows p {
@@ -104,24 +107,26 @@ button:hover {
   margin: 0 auto;
   border-radius: 20px;
   color: var(--main-color);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
 }
 .static-text h2 {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 48px;
-  background: linear-gradient(to right, #943407, #d77243);
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 64px;
+  background: linear-gradient(180deg, #1c0c04 20%, #d94e0c 100%);
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 .static-text .descripe {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 28px;
-  width: 50%;
-  margin: 0 auto;
+  width: 55%;
+  margin: 10px auto 0;
+  color: var(--p-color);
 }
 /* static-text styles end */
 /* genral style end */
@@ -159,7 +164,9 @@ nav .left-nav ul .active {
   align-items: center;
   gap: 10px;
   margin-bottom: 15px;
-  transition: background-color 0.3s, border-radius 0.3s;
+  transition:
+    background-color 0.3s,
+    border-radius 0.3s;
 }
 .custom-items:hover {
   background-color: var(--hover-color);
@@ -432,34 +439,85 @@ nav .left-nav ul .active {
 }
 /* tab cards style start */
 .tech-card {
-  border: 1px solid #eee;
-  padding: 30px;
+  background: linear-gradient(180deg, #ffffff 60%, #f0f4ff 100%);
+  border: 1px solid #e8ecf4;
+  padding: 28px;
   transition: all 0.3s ease;
+  height: 100%;
 }
-.one {
-  background-color: rgb(51, 173, 218);
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+.tech-card h5 {
+  color: #1a1a2e;
+  margin-bottom: 8px;
 }
 .tab-icon {
   font-size: 20px;
-  border-radius: 15px;
-  width: 20%;
-  padding: 20px;
-  text-align: center;
+  border-radius: 14px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .badge-custom {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 11px;
+  font-weight: 600;
   line-height: 16px;
-  padding: 6px 12px;
-  background-color: #dbeafe;
+  padding: 4px 10px;
+  background-color: #f0f4ff;
+  color: #4a5565;
+  border: 1px solid #e2e8f0;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+/* Icon color classes */
+.icon-blue {
+  background-color: #3b82f6;
+}
+.icon-black {
+  background-color: #1a1a2e;
+}
+.icon-green {
+  background-color: #10b981;
+}
+.icon-red {
+  background-color: #ef4444;
+}
+.icon-cyan {
+  background-color: #06b6d4;
+}
+.icon-purple {
+  background-color: #8b5cf6;
+}
+.icon-orange {
+  background-color: #f59e0b;
+}
+.icon-teal {
+  background-color: #14b8a6;
+}
+.icon-indigo {
+  background-color: #6366f1;
+}
+.icon-yellow {
+  background-color: #eab308;
+}
+.icon-lime {
+  background-color: #84cc16;
+}
+.icon-pink {
+  background-color: #ec4899;
 }
 /* tab cards style end */
 /* important section end */
 /* Testimonials section start */
 .Testimonials {
-  background-color: #FCF9F5;
+  background-color: #fcf9f5;
 }
 .Testimonials-icon {
   height: 100%;
@@ -484,57 +542,64 @@ nav .left-nav ul .active {
   color: var(--main-color);
   background-color: var(--background-heroSection-color);
 }
-.Testimonials-text p{
+.Testimonials-text p {
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
   color: var(--p-color);
 }
-.rounded-img{
+.rounded-img {
   width: 100px;
   height: 100px;
   object-fit: cover;
   border: 2px solid var(--background-heroSection-color);
   border-radius: 50%;
 }
-.back{
+.back {
   background-color: var(--main-color);
 }
-.back i{
+.back i {
   color: white;
 }
-.client-info h5{
+.client-info h5 {
   font-size: 18px;
   font-weight: 700;
   color: var(--Dark-main-color);
 }
-.client-info .client-position{
+.client-info .client-position {
   font-size: 14px;
   font-weight: 400;
   color: var(--p-color);
 }
-.client-info .client-linkedin{
+.client-info .client-linkedin {
   font-size: 14px;
   font-weight: 500;
   color: var(--p-color);
 }
-.client-info .client-linkedin i{
+.client-info .client-linkedin i {
   color: var(--main-color);
 }
-.Testimonials-client-growth h5{
+.Testimonials-client-growth h5 {
   font-size: 34px;
   font-weight: 700;
   color: var(--Dark-main-color);
 }
-.Testimonials-client-growth p{
+.Testimonials-client-growth p {
   font-size: 14px;
   font-weight: 400;
   color: var(--p-color);
 }
 /* Testimonials section end */
 /* FAQ section start */
-.accordion-button{
-  padding: 30px;
+.accordion {
+  place-items: center;
+}
+.accordion-item {
+  width: 75%;
+}
+
+.accordion-button {
+  padding: 35px;
 }
 .accordion-button:not(.collapsed) {
   background-color: var(--background-heroSection-color);
@@ -542,8 +607,8 @@ nav .left-nav ul .active {
 }
 /* FAQ section end */
 /* content section start */
-.content{
-  background-color: #FCF9F5;
+.content {
+  background-color: #fcf9f5;
 }
 /* content section end */
 /* footer section start */
@@ -592,3 +657,469 @@ nav .left-nav ul .active {
   color: #f15a24;
 }
 /* footer section end */
+
+/* ========================= */
+/* Consultation Card Section */
+/* ========================= */
+.consultation-wrapper {
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+.consultation-form-area {
+  background-color: #fff;
+}
+.consultation-title {
+  font-size: 26px;
+  color: #1a1a1a;
+}
+.consultation-subtitle {
+  font-size: 15px;
+  color: var(--p-color);
+  line-height: 1.6;
+}
+
+/* Form Labels */
+.form-label-custom {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--main-color);
+  margin-bottom: 6px;
+}
+
+/* Inputs */
+.consultation-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: Inter;
+  color: #333;
+  background-color: #fafafa;
+  outline: none;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+.consultation-input::placeholder {
+  color: #aaa;
+}
+.consultation-input:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 3px rgba(217, 78, 12, 0.1);
+}
+
+/* Selects */
+.consultation-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: Inter;
+  color: #999;
+  background-color: #fafafa;
+  outline: none;
+  appearance: auto;
+  cursor: pointer;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+.consultation-select:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 3px rgba(217, 78, 12, 0.1);
+  color: #333;
+}
+
+/* Budget Cards */
+.budget-option {
+  flex: 1;
+  cursor: pointer;
+}
+.budget-card {
+  border: 2px solid #e5e7eb;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+.budget-amount {
+  font-size: 14px;
+  color: #1a1a1a;
+}
+.budget-label {
+  font-size: 12px;
+  color: var(--p-color);
+}
+.budget-radio:checked + .budget-card {
+  border-color: var(--main-color);
+  background-color: var(--second-color);
+}
+.budget-radio:checked + .budget-card .budget-amount {
+  color: var(--main-color);
+}
+.budget-card:hover {
+  border-color: var(--main-color);
+  transform: translateY(-2px);
+}
+
+/* Textarea */
+.consultation-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: Inter;
+  color: #333;
+  background-color: #fafafa;
+  outline: none;
+  resize: vertical;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+.consultation-textarea::placeholder {
+  color: #aaa;
+}
+.consultation-textarea:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 3px rgba(217, 78, 12, 0.1);
+}
+
+/* Checkbox */
+.consultation-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--main-color);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.privacy-label {
+  font-size: 13px;
+  color: var(--p-color);
+}
+.privacy-link {
+  color: var(--main-color) !important;
+  font-weight: 600;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+}
+.privacy-link:hover {
+  color: var(--Dark-main-color) !important;
+}
+
+/* Submit Button */
+.consultation-submit-btn {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    var(--main-color),
+    var(--Dark-main-color)
+  );
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.consultation-submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(217, 78, 12, 0.4);
+}
+
+/* ========================= */
+/* Why Choose Clarity Panel  */
+/* ========================= */
+.why-choose-area {
+  background: linear-gradient(160deg, #e8641b, #b34817 50%, #8a350f);
+  color: white;
+}
+.why-choose-title {
+  font-size: 24px;
+  color: white;
+}
+.why-choose-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+}
+.why-choose-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  line-height: 1.5;
+}
+.why-choose-divider {
+  border-color: rgba(255, 255, 255, 0.25);
+  opacity: 1;
+}
+.contact-item span,
+.contact-item i {
+  font-size: 14px;
+}
+
+/* Highlight text decoration */
+.highlight-text {
+  position: relative;
+}
+.highlight-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--main-color),
+    var(--Dark-main-color)
+  );
+  border-radius: 2px;
+}
+
+/* Hamburger Button */
+.hamburger-btn {
+  background: none;
+  border: 1px solid #e5e7eb;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+.hamburger-btn:hover {
+  background-color: var(--hover-color);
+  color: var(--main-color);
+  box-shadow: none;
+}
+
+/* =============================== */
+/* RESPONSIVE MEDIA QUERIES        */
+/* =============================== */
+
+/* Tablet and below */
+@media (max-width: 991.98px) {
+  /* Nav */
+  #navCollapse {
+    width: 100%;
+    padding-top: 15px;
+  }
+  .left-nav ul {
+    padding-left: 0;
+  }
+  .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    box-shadow: none;
+    border: 1px solid #eee;
+  }
+  .right-nav {
+    margin-right: 0;
+  }
+
+  /* Hero */
+  .hero-section .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-left,
+  .hero-right {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .hero-left {
+    margin-bottom: 40px !important;
+  }
+  .hero-right .shadow {
+    width: 100%;
+    max-width: 450px;
+    height: 450px;
+  }
+  .box2 {
+    right: auto;
+    left: -20px;
+  }
+  .hero-main-text {
+    font-size: 44px;
+    line-height: 55px;
+  }
+  .hero-left .Transforming {
+    margin: 0 auto !important;
+    width: 55%;
+  }
+
+  /* Static text */
+  .static-text h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .static-text .descripe {
+    width: 75%;
+  }
+
+  /* Consultation */
+  .consultation-wrapper {
+    width: 95% !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  section {
+    padding-top: 100px;
+  }
+  .hero-section {
+    top: 70px;
+  }
+
+  /* Hero */
+  .hero-main-text {
+    font-size: 36px;
+    line-height: 46px;
+  }
+  .craft {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .hero-right .shadow {
+    max-width: 350px;
+    height: 350px;
+  }
+  .box1 i {
+    padding: 25px 35px 25px 25px;
+  }
+  .box2 i {
+    padding: 20px 30px 20px 20px;
+  }
+  .start-project,
+  .Demo {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+
+  /* Static text */
+  .static-text h2 {
+    font-size: 34px;
+    line-height: 44px;
+  }
+  .static-text .descripe {
+    width: 90%;
+    font-size: 16px;
+  }
+  .static-text .arrows {
+    width: 60%;
+  }
+  .hero-left .Transforming {
+    width: 75%;
+  }
+
+  /* Tech tabs */
+  .tabs ul {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tabs ul li {
+    margin-right: 0 !important;
+    padding: 8px 16px !important;
+    font-size: 13px;
+  }
+  .tab-icon {
+    width: 35%;
+  }
+
+  /* Testimonials */
+  .carousel-contanair {
+    padding: 25px !important;
+  }
+  .Testimonials-text p {
+    width: 100% !important;
+  }
+  .Testimonials-client {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Consultation */
+  .consultation-wrapper {
+    width: 100% !important;
+  }
+  .consultation-form-area {
+    padding: 30px !important;
+  }
+  .why-choose-area {
+    padding: 30px !important;
+  }
+  .budget-card {
+    padding: 10px 8px !important;
+  }
+  .budget-amount {
+    font-size: 12px;
+  }
+
+  /* Footer */
+  .footer-desc {
+    max-width: 100%;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 575.98px) {
+  .hero-main-text {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .hero-right .shadow {
+    max-width: 260px;
+    height: 260px;
+  }
+  .box1,
+  .box2 {
+    display: none;
+  }
+
+  /* Static text */
+  .static-text h2 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+  .static-text .arrows {
+    width: 90%;
+  }
+
+  /* Stats */
+  .hero-left .mt-5 span {
+    display: block !important;
+    margin-bottom: 15px;
+  }
+
+  /* Consultation form */
+  .consultation-form-area .row .col-6 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  .consultation-form-area .d-flex.gap-3 {
+    flex-direction: column;
+  }
+
+  /* Highlight decoration */
+  .highlight-text::after {
+    bottom: 6px;
+    height: 3px;
+  }
+}
