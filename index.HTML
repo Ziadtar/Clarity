@@ -395,7 +395,7 @@
       </div>
       <div class="container">
         <div class="tabs">
-          <ul class="d-flex justify-content-center mb-4" role="tablist">
+          <ul class="nav d-flex justify-content-center mb-4" role="tablist">
             <li class="active me-4 p-3 nav-item">
               <a class="nav-link active" data-bs-toggle="tab" href="#frontend"
                 ><i class="fas fa-code me-2"></i>Frontend</a
@@ -1679,5 +1679,22 @@
     </footer>
 
     <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script>
+      // Technology tabs: sync active class on <li> when tab changes
+      document.querySelectorAll('.tabs .nav-link').forEach(function (tab) {
+        tab.addEventListener('click', function (e) {
+          e.preventDefault();
+          // Remove active from all li
+          document.querySelectorAll('.tabs ul li').forEach(function (li) {
+            li.classList.remove('active');
+          });
+          // Add active to clicked li
+          this.closest('li').classList.add('active');
+          // Activate the Bootstrap tab
+          var bsTab = new bootstrap.Tab(this);
+          bsTab.show();
+        });
+      });
+    </script>
   </body>
 </html>

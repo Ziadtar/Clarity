@@ -417,6 +417,18 @@ nav .left-nav ul .active {
 .tabs ul {
   border-bottom: 1px solid #e5e7eb;
 }
+.tabs .nav-link {
+  color: #6b7280;
+  background: none;
+  border: none;
+}
+.tabs .nav-link:hover,
+.tabs .nav-link:focus {
+  color: var(--main-color);
+}
+.tabs .nav-link.active {
+  color: var(--main-color);
+}
 .tabs ul li.active {
   color: var(--main-color);
   border-bottom: 2px solid var(--main-color);
